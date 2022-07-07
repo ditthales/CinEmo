@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47AE475828775FD500DF454A /* FeaturedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AE475728775FD500DF454A /* FeaturedViewController.swift */; };
 		47D9E4DA2874ACA800430C08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D9E4D92874ACA800430C08 /* AppDelegate.swift */; };
 		47D9E4DC2874ACA800430C08 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D9E4DB2874ACA800430C08 /* SceneDelegate.swift */; };
 		47D9E4DE2874ACA800430C08 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D9E4DD2874ACA800430C08 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		47AE475728775FD500DF454A /* FeaturedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedViewController.swift; sourceTree = "<group>"; };
 		47D9E4D62874ACA800430C08 /* ChallengeTriunfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChallengeTriunfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47D9E4D92874ACA800430C08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47D9E4DB2874ACA800430C08 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +39,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		47AE475628775FB700DF454A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				47D9E4DD2874ACA800430C08 /* ViewController.swift */,
+				47AE475728775FD500DF454A /* FeaturedViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		47D9E4CD2874ACA800430C08 = {
 			isa = PBXGroup;
 			children = (
@@ -58,7 +69,7 @@
 			children = (
 				47D9E4D92874ACA800430C08 /* AppDelegate.swift */,
 				47D9E4DB2874ACA800430C08 /* SceneDelegate.swift */,
-				47D9E4DD2874ACA800430C08 /* ViewController.swift */,
+				47AE475628775FB700DF454A /* Controllers */,
 				47D9E4DF2874ACA800430C08 /* Main.storyboard */,
 				47D9E4E22874ACA800430C08 /* Assets.xcassets */,
 				47D9E4E42874ACA800430C08 /* LaunchScreen.storyboard */,
@@ -140,6 +151,7 @@
 			files = (
 				47D9E4DE2874ACA800430C08 /* ViewController.swift in Sources */,
 				47D9E4DA2874ACA800430C08 /* AppDelegate.swift in Sources */,
+				47AE475828775FD500DF454A /* FeaturedViewController.swift in Sources */,
 				47D9E4DC2874ACA800430C08 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
