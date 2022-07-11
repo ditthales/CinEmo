@@ -67,7 +67,7 @@
                                                             <inset key="sectionInset" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
                                                         </collectionViewFlowLayout>
                                                         <cells>
-                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U5L-nh-6dc">
+                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="popularCell" id="U5L-nh-6dc" customClass="PopularCollectionViewCell" customModule="ChallengeTriunfo" customModuleProvider="target">
                                                                 <rect key="frame" x="8" y="0.0" width="200" height="140"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="pHd-pb-s1u">
@@ -94,6 +94,10 @@
                                                                         <constraint firstItem="wBZ-mY-Sqx" firstAttribute="leading" secondItem="pHd-pb-s1u" secondAttribute="leading" constant="8" id="rqa-om-fdj"/>
                                                                     </constraints>
                                                                 </collectionViewCellContentView>
+                                                                <connections>
+                                                                    <outlet property="image" destination="wBZ-mY-Sqx" id="V3Z-tO-Yfj"/>
+                                                                    <outlet property="titleLabel" destination="Jkl-kB-wAk" id="8o9-Qf-L2Z"/>
+                                                                </connections>
                                                             </collectionViewCell>
                                                         </cells>
                                                     </collectionView>
@@ -143,7 +147,7 @@
                                                             <inset key="sectionInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
                                                         </collectionViewFlowLayout>
                                                         <cells>
-                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Efg-Tp-yHO">
+                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Efg-Tp-yHO" customClass="NowPlayingCollectionViewCell" customModule="ChallengeTriunfo" customModuleProvider="target">
                                                                 <rect key="frame" x="16" y="0.0" width="251" height="114"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="JZT-hD-h14">
@@ -189,6 +193,11 @@
                                                                         <constraint firstItem="NbW-ja-leQ" firstAttribute="leading" secondItem="JZT-hD-h14" secondAttribute="leading" id="wVY-qY-ovZ"/>
                                                                     </constraints>
                                                                 </collectionViewCellContentView>
+                                                                <connections>
+                                                                    <outlet property="dateLabel" destination="RJI-Jt-0nH" id="D5g-Gd-lWe"/>
+                                                                    <outlet property="image" destination="NbW-ja-leQ" id="5v5-r8-XwU"/>
+                                                                    <outlet property="titleLabel" destination="qm9-9F-FBr" id="TGD-Cm-yp4"/>
+                                                                </connections>
                                                             </collectionViewCell>
                                                         </cells>
                                                     </collectionView>
@@ -238,7 +247,7 @@
                                                             <inset key="sectionInset" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
                                                         </collectionViewFlowLayout>
                                                         <cells>
-                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="CPn-BE-3vS">
+                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="CPn-BE-3vS" customClass="UpcomingCollectionViewCell" customModule="ChallengeTriunfo" customModuleProvider="target">
                                                                 <rect key="frame" x="8" y="9.5" width="200" height="299"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="FuZ-d9-Ex0">
@@ -249,39 +258,48 @@
                                                                             <rect key="frame" x="8" y="8" width="184" height="260"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="260" id="0FA-te-Rom"/>
+                                                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="260" id="G2w-my-BtC"/>
                                                                                 <constraint firstAttribute="width" constant="184" id="Nmh-wR-pH6"/>
+                                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="184" id="izJ-Af-nCa"/>
                                                                             </constraints>
                                                                         </imageView>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&lt;titleLabel&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ErS-y6-V3c">
-                                                                            <rect key="frame" x="8" y="272" width="132" height="19"/>
+                                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vS4-T8-Iya">
+                                                                            <rect key="frame" x="8" y="272" width="183.5" height="19"/>
+                                                                            <subviews>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="251" text="&lt;titleLabel&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ErS-y6-V3c">
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="86.5" height="19"/>
+                                                                                    <constraints>
+                                                                                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="132" id="6tl-IJ-s7U"/>
+                                                                                    </constraints>
+                                                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                                                    <nil key="textColor"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                </label>
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Jun 27" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ufu-Q1-JHk">
+                                                                                    <rect key="frame" x="86.5" y="0.0" width="97" height="19"/>
+                                                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                                                    <color key="textColor" red="0.70196078431372544" green="0.70196078431372544" blue="0.70196078431372544" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                    <nil key="highlightedColor"/>
+                                                                                </label>
+                                                                            </subviews>
                                                                             <constraints>
-                                                                                <constraint firstAttribute="width" constant="132" id="NTU-Fw-lVL"/>
-                                                                                <constraint firstAttribute="height" constant="19" id="TEf-NJ-wWY"/>
+                                                                                <constraint firstAttribute="width" constant="183.5" id="9yh-bt-sTO"/>
+                                                                                <constraint firstAttribute="height" constant="19" id="JTu-9R-nog"/>
                                                                             </constraints>
-                                                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                                            <nil key="textColor"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jun 27" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ufu-Q1-JHk">
-                                                                            <rect key="frame" x="144" y="272" width="48" height="19"/>
-                                                                            <constraints>
-                                                                                <constraint firstAttribute="width" constant="48" id="M6U-a6-N0K"/>
-                                                                                <constraint firstAttribute="height" constant="19" id="ZA9-7B-XIg"/>
-                                                                            </constraints>
-                                                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                                            <color key="textColor" red="0.70196078431372544" green="0.70196078431372544" blue="0.70196078431372544" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                            <nil key="highlightedColor"/>
-                                                                        </label>
+                                                                        </stackView>
                                                                     </subviews>
                                                                     <constraints>
-                                                                        <constraint firstItem="ErS-y6-V3c" firstAttribute="leading" secondItem="FuZ-d9-Ex0" secondAttribute="leading" constant="8" id="7oi-UU-OQp"/>
-                                                                        <constraint firstAttribute="trailing" secondItem="ufu-Q1-JHk" secondAttribute="trailing" constant="8" id="7ub-T0-y9u"/>
-                                                                        <constraint firstItem="ErS-y6-V3c" firstAttribute="top" secondItem="D7d-xJ-wwA" secondAttribute="bottom" constant="4" id="P3b-Yg-wme"/>
-                                                                        <constraint firstItem="D7d-xJ-wwA" firstAttribute="top" secondItem="FuZ-d9-Ex0" secondAttribute="top" constant="8" id="aD0-eb-Enu"/>
-                                                                        <constraint firstItem="D7d-xJ-wwA" firstAttribute="leading" secondItem="FuZ-d9-Ex0" secondAttribute="leading" constant="8" id="cka-Oo-UoJ"/>
-                                                                        <constraint firstItem="ufu-Q1-JHk" firstAttribute="top" secondItem="D7d-xJ-wwA" secondAttribute="bottom" constant="4" id="egJ-5g-LVy"/>
+                                                                        <constraint firstItem="vS4-T8-Iya" firstAttribute="top" secondItem="D7d-xJ-wwA" secondAttribute="bottom" constant="4" id="BaO-Sg-EAc"/>
+                                                                        <constraint firstItem="D7d-xJ-wwA" firstAttribute="leading" secondItem="FuZ-d9-Ex0" secondAttribute="leading" constant="8" id="ROT-fv-ghf"/>
+                                                                        <constraint firstItem="vS4-T8-Iya" firstAttribute="leading" secondItem="FuZ-d9-Ex0" secondAttribute="leading" constant="8" id="bCf-SH-FgH"/>
+                                                                        <constraint firstItem="D7d-xJ-wwA" firstAttribute="top" secondItem="FuZ-d9-Ex0" secondAttribute="top" constant="8" id="elA-6Y-zTQ"/>
                                                                     </constraints>
                                                                 </collectionViewCellContentView>
+                                                                <connections>
+                                                                    <outlet property="dateLabel" destination="ufu-Q1-JHk" id="aeX-mu-Q3U"/>
+                                                                    <outlet property="image" destination="D7d-xJ-wwA" id="vDf-7d-ZRd"/>
+                                                                    <outlet property="titleLabel" destination="ErS-y6-V3c" id="Lsl-fj-1kU"/>
+                                                                </connections>
                                                             </collectionViewCell>
                                                         </cells>
                                                     </collectionView>
@@ -312,6 +330,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="Featured" id="fhK-g2-OQa"/>
                     <size key="freeformSize" width="414" height="1341"/>
+                    <connections>
+                        <outlet property="popularCollectionView" destination="7fD-qF-63a" id="gIB-RH-K3u"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

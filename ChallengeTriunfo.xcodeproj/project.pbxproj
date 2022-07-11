@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4771E298287C979E00BBB609 /* PopularCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4771E297287C979E00BBB609 /* PopularCollectionViewCell.swift */; };
+		4771E29D287C986000BBB609 /* NowPlayingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4771E29C287C986000BBB609 /* NowPlayingCollectionViewCell.swift */; };
+		4771E29F287C987800BBB609 /* UpcomingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4771E29E287C987800BBB609 /* UpcomingCollectionViewCell.swift */; };
 		47AE475828775FD500DF454A /* FeaturedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AE475728775FD500DF454A /* FeaturedViewController.swift */; };
 		47D9E4DA2874ACA800430C08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D9E4D92874ACA800430C08 /* AppDelegate.swift */; };
 		47D9E4DC2874ACA800430C08 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D9E4DB2874ACA800430C08 /* SceneDelegate.swift */; };
@@ -17,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4771E297287C979E00BBB609 /* PopularCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularCollectionViewCell.swift; sourceTree = "<group>"; };
+		4771E29C287C986000BBB609 /* NowPlayingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingCollectionViewCell.swift; sourceTree = "<group>"; };
+		4771E29E287C987800BBB609 /* UpcomingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingCollectionViewCell.swift; sourceTree = "<group>"; };
 		47AE475728775FD500DF454A /* FeaturedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedViewController.swift; sourceTree = "<group>"; };
 		47D9E4D62874ACA800430C08 /* ChallengeTriunfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChallengeTriunfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47D9E4D92874ACA800430C08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +45,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4771E29A287C981800BBB609 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4771E297287C979E00BBB609 /* PopularCollectionViewCell.swift */,
+				4771E29C287C986000BBB609 /* NowPlayingCollectionViewCell.swift */,
+				4771E29E287C987800BBB609 /* UpcomingCollectionViewCell.swift */,
+				47D9E4DF2874ACA800430C08 /* Main.storyboard */,
+				47D9E4E42874ACA800430C08 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4771E2A1287C9DFD00BBB609 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				47D9E4E72874ACA800430C08 /* Info.plist */,
+				47D9E4E22874ACA800430C08 /* Assets.xcassets */,
+			);
+			name = SupportingFiles;
+			sourceTree = "<group>";
+		};
 		47AE475628775FB700DF454A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -70,10 +97,8 @@
 				47D9E4D92874ACA800430C08 /* AppDelegate.swift */,
 				47D9E4DB2874ACA800430C08 /* SceneDelegate.swift */,
 				47AE475628775FB700DF454A /* Controllers */,
-				47D9E4DF2874ACA800430C08 /* Main.storyboard */,
-				47D9E4E22874ACA800430C08 /* Assets.xcassets */,
-				47D9E4E42874ACA800430C08 /* LaunchScreen.storyboard */,
-				47D9E4E72874ACA800430C08 /* Info.plist */,
+				4771E29A287C981800BBB609 /* View */,
+				4771E2A1287C9DFD00BBB609 /* SupportingFiles */,
 			);
 			path = ChallengeTriunfo;
 			sourceTree = "<group>";
@@ -149,8 +174,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4771E298287C979E00BBB609 /* PopularCollectionViewCell.swift in Sources */,
 				47D9E4DE2874ACA800430C08 /* ViewController.swift in Sources */,
+				4771E29D287C986000BBB609 /* NowPlayingCollectionViewCell.swift in Sources */,
 				47D9E4DA2874ACA800430C08 /* AppDelegate.swift in Sources */,
+				4771E29F287C987800BBB609 /* UpcomingCollectionViewCell.swift in Sources */,
 				47AE475828775FD500DF454A /* FeaturedViewController.swift in Sources */,
 				47D9E4DC2874ACA800430C08 /* SceneDelegate.swift in Sources */,
 			);
