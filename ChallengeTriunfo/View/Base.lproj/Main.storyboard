@@ -147,7 +147,7 @@
                                                             <inset key="sectionInset" minX="16" minY="0.0" maxX="16" maxY="0.0"/>
                                                         </collectionViewFlowLayout>
                                                         <cells>
-                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Efg-Tp-yHO" customClass="NowPlayingCollectionViewCell" customModule="ChallengeTriunfo" customModuleProvider="target">
+                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="nowPlayingCell" id="Efg-Tp-yHO" customClass="NowPlayingCollectionViewCell" customModule="ChallengeTriunfo" customModuleProvider="target">
                                                                 <rect key="frame" x="16" y="0.0" width="251" height="114"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="JZT-hD-h14">
@@ -247,7 +247,7 @@
                                                             <inset key="sectionInset" minX="8" minY="0.0" maxX="8" maxY="0.0"/>
                                                         </collectionViewFlowLayout>
                                                         <cells>
-                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="CPn-BE-3vS" customClass="UpcomingCollectionViewCell" customModule="ChallengeTriunfo" customModuleProvider="target">
+                                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="upcomingCell" id="CPn-BE-3vS" customClass="UpcomingCollectionViewCell" customModule="ChallengeTriunfo" customModuleProvider="target">
                                                                 <rect key="frame" x="8" y="9.5" width="200" height="299"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="FuZ-d9-Ex0">
@@ -275,7 +275,7 @@
                                                                                     <nil key="textColor"/>
                                                                                     <nil key="highlightedColor"/>
                                                                                 </label>
-                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Jun 27" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ufu-Q1-JHk">
+                                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="Jun 27" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ufu-Q1-JHk">
                                                                                     <rect key="frame" x="86.5" y="0.0" width="97" height="19"/>
                                                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                                                     <color key="textColor" red="0.70196078431372544" green="0.70196078431372544" blue="0.70196078431372544" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
@@ -331,7 +331,9 @@
                     <navigationItem key="navigationItem" title="Featured" id="fhK-g2-OQa"/>
                     <size key="freeformSize" width="414" height="1341"/>
                     <connections>
+                        <outlet property="nowPlayingCollectionView" destination="QjD-AZ-iSf" id="hd2-Qd-kVc"/>
                         <outlet property="popularCollectionView" destination="7fD-qF-63a" id="gIB-RH-K3u"/>
+                        <outlet property="upcomingCollectionView" destination="yIf-Fo-g0V" id="tvc-3g-0ax"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

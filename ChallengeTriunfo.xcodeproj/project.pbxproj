@@ -11,6 +11,12 @@
 		4771E29D287C986000BBB609 /* NowPlayingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4771E29C287C986000BBB609 /* NowPlayingCollectionViewCell.swift */; };
 		4771E29F287C987800BBB609 /* UpcomingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4771E29E287C987800BBB609 /* UpcomingCollectionViewCell.swift */; };
 		47AE475828775FD500DF454A /* FeaturedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AE475728775FD500DF454A /* FeaturedViewController.swift */; };
+		47AF128C287DEE200064D54F /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AF128B287DEE200064D54F /* Movie.swift */; };
+		47AF129C287DF53E0064D54F /* Movie+TrendingThisWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AF1297287DF53D0064D54F /* Movie+TrendingThisWeek.swift */; };
+		47AF129D287DF53E0064D54F /* Movie+TrendingToday.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AF1298287DF53D0064D54F /* Movie+TrendingToday.swift */; };
+		47AF129E287DF53E0064D54F /* Movie+NowPlaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AF1299287DF53D0064D54F /* Movie+NowPlaying.swift */; };
+		47AF129F287DF53E0064D54F /* Movie+Popular.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AF129A287DF53D0064D54F /* Movie+Popular.swift */; };
+		47AF12A0287DF53E0064D54F /* Movie+Upcoming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AF129B287DF53E0064D54F /* Movie+Upcoming.swift */; };
 		47D9E4DA2874ACA800430C08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D9E4D92874ACA800430C08 /* AppDelegate.swift */; };
 		47D9E4DC2874ACA800430C08 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D9E4DB2874ACA800430C08 /* SceneDelegate.swift */; };
 		47D9E4DE2874ACA800430C08 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D9E4DD2874ACA800430C08 /* ViewController.swift */; };
@@ -24,6 +30,12 @@
 		4771E29C287C986000BBB609 /* NowPlayingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NowPlayingCollectionViewCell.swift; sourceTree = "<group>"; };
 		4771E29E287C987800BBB609 /* UpcomingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingCollectionViewCell.swift; sourceTree = "<group>"; };
 		47AE475728775FD500DF454A /* FeaturedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedViewController.swift; sourceTree = "<group>"; };
+		47AF128B287DEE200064D54F /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		47AF1297287DF53D0064D54F /* Movie+TrendingThisWeek.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Movie+TrendingThisWeek.swift"; sourceTree = "<group>"; };
+		47AF1298287DF53D0064D54F /* Movie+TrendingToday.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Movie+TrendingToday.swift"; sourceTree = "<group>"; };
+		47AF1299287DF53D0064D54F /* Movie+NowPlaying.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Movie+NowPlaying.swift"; sourceTree = "<group>"; };
+		47AF129A287DF53D0064D54F /* Movie+Popular.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Movie+Popular.swift"; sourceTree = "<group>"; };
+		47AF129B287DF53E0064D54F /* Movie+Upcoming.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Movie+Upcoming.swift"; sourceTree = "<group>"; };
 		47D9E4D62874ACA800430C08 /* ChallengeTriunfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChallengeTriunfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47D9E4D92874ACA800430C08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47D9E4DB2874ACA800430C08 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +87,19 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		47AF128A287DEDF40064D54F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				47AF1299287DF53D0064D54F /* Movie+NowPlaying.swift */,
+				47AF129A287DF53D0064D54F /* Movie+Popular.swift */,
+				47AF1297287DF53D0064D54F /* Movie+TrendingThisWeek.swift */,
+				47AF1298287DF53D0064D54F /* Movie+TrendingToday.swift */,
+				47AF129B287DF53E0064D54F /* Movie+Upcoming.swift */,
+				47AF128B287DEE200064D54F /* Movie.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		47D9E4CD2874ACA800430C08 = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +121,7 @@
 			children = (
 				47D9E4D92874ACA800430C08 /* AppDelegate.swift */,
 				47D9E4DB2874ACA800430C08 /* SceneDelegate.swift */,
+				47AF128A287DEDF40064D54F /* Model */,
 				47AE475628775FB700DF454A /* Controllers */,
 				4771E29A287C981800BBB609 /* View */,
 				4771E2A1287C9DFD00BBB609 /* SupportingFiles */,
@@ -175,10 +201,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				4771E298287C979E00BBB609 /* PopularCollectionViewCell.swift in Sources */,
+				47AF129D287DF53E0064D54F /* Movie+TrendingToday.swift in Sources */,
 				47D9E4DE2874ACA800430C08 /* ViewController.swift in Sources */,
 				4771E29D287C986000BBB609 /* NowPlayingCollectionViewCell.swift in Sources */,
+				47AF129C287DF53E0064D54F /* Movie+TrendingThisWeek.swift in Sources */,
 				47D9E4DA2874ACA800430C08 /* AppDelegate.swift in Sources */,
+				47AF129E287DF53E0064D54F /* Movie+NowPlaying.swift in Sources */,
 				4771E29F287C987800BBB609 /* UpcomingCollectionViewCell.swift in Sources */,
+				47AF129F287DF53E0064D54F /* Movie+Popular.swift in Sources */,
+				47AF12A0287DF53E0064D54F /* Movie+Upcoming.swift in Sources */,
+				47AF128C287DEE200064D54F /* Movie.swift in Sources */,
 				47AE475828775FD500DF454A /* FeaturedViewController.swift in Sources */,
 				47D9E4DC2874ACA800430C08 /* SceneDelegate.swift in Sources */,
 			);
