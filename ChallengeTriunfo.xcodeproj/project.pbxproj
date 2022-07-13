@@ -17,12 +17,16 @@
 		47AF129E287DF53E0064D54F /* Movie+NowPlaying.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AF1299287DF53D0064D54F /* Movie+NowPlaying.swift */; };
 		47AF129F287DF53E0064D54F /* Movie+Popular.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AF129A287DF53D0064D54F /* Movie+Popular.swift */; };
 		47AF12A0287DF53E0064D54F /* Movie+Upcoming.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AF129B287DF53E0064D54F /* Movie+Upcoming.swift */; };
+		47AF12A2287E144C0064D54F /* FeaturedViewController+UICollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AF12A1287E144C0064D54F /* FeaturedViewController+UICollectionViewDataSource.swift */; };
 		47D9E4DA2874ACA800430C08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D9E4D92874ACA800430C08 /* AppDelegate.swift */; };
 		47D9E4DC2874ACA800430C08 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D9E4DB2874ACA800430C08 /* SceneDelegate.swift */; };
 		47D9E4DE2874ACA800430C08 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47D9E4DD2874ACA800430C08 /* ViewController.swift */; };
 		47D9E4E12874ACA800430C08 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47D9E4DF2874ACA800430C08 /* Main.storyboard */; };
 		47D9E4E32874ACA800430C08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47D9E4E22874ACA800430C08 /* Assets.xcassets */; };
 		47D9E4E62874ACA800430C08 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47D9E4E42874ACA800430C08 /* LaunchScreen.storyboard */; };
+		47E890A6287F08D20037EBD6 /* Coertschriftromaans-vXvy.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 47E890A5287F08D20037EBD6 /* Coertschriftromaans-vXvy.ttf */; };
+		47F5677F287F3ED10086CFFF /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F5677E287F3ED10086CFFF /* DetailsViewController.swift */; };
+		47F56781287F47E40086CFFF /* FeaturedViewController+UICollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47F56780287F47E40086CFFF /* FeaturedViewController+UICollectionViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,7 @@
 		47AF1299287DF53D0064D54F /* Movie+NowPlaying.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Movie+NowPlaying.swift"; sourceTree = "<group>"; };
 		47AF129A287DF53D0064D54F /* Movie+Popular.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Movie+Popular.swift"; sourceTree = "<group>"; };
 		47AF129B287DF53E0064D54F /* Movie+Upcoming.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Movie+Upcoming.swift"; sourceTree = "<group>"; };
+		47AF12A1287E144C0064D54F /* FeaturedViewController+UICollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeaturedViewController+UICollectionViewDataSource.swift"; sourceTree = "<group>"; };
 		47D9E4D62874ACA800430C08 /* ChallengeTriunfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChallengeTriunfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47D9E4D92874ACA800430C08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		47D9E4DB2874ACA800430C08 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -44,6 +49,9 @@
 		47D9E4E22874ACA800430C08 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47D9E4E52874ACA800430C08 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		47D9E4E72874ACA800430C08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47E890A5287F08D20037EBD6 /* Coertschriftromaans-vXvy.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Coertschriftromaans-vXvy.ttf"; sourceTree = "<group>"; };
+		47F5677E287F3ED10086CFFF /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		47F56780287F47E40086CFFF /* FeaturedViewController+UICollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeaturedViewController+UICollectionViewDelegate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +90,10 @@
 			isa = PBXGroup;
 			children = (
 				47D9E4DD2874ACA800430C08 /* ViewController.swift */,
+				47F5677E287F3ED10086CFFF /* DetailsViewController.swift */,
 				47AE475728775FD500DF454A /* FeaturedViewController.swift */,
+				47AF12A1287E144C0064D54F /* FeaturedViewController+UICollectionViewDataSource.swift */,
+				47F56780287F47E40086CFFF /* FeaturedViewController+UICollectionViewDelegate.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -121,12 +132,21 @@
 			children = (
 				47D9E4D92874ACA800430C08 /* AppDelegate.swift */,
 				47D9E4DB2874ACA800430C08 /* SceneDelegate.swift */,
+				47E890A8287F08F30037EBD6 /* Fonts */,
 				47AF128A287DEDF40064D54F /* Model */,
 				47AE475628775FB700DF454A /* Controllers */,
 				4771E29A287C981800BBB609 /* View */,
 				4771E2A1287C9DFD00BBB609 /* SupportingFiles */,
 			);
 			path = ChallengeTriunfo;
+			sourceTree = "<group>";
+		};
+		47E890A8287F08F30037EBD6 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				47E890A5287F08D20037EBD6 /* Coertschriftromaans-vXvy.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +210,7 @@
 				47D9E4E62874ACA800430C08 /* LaunchScreen.storyboard in Resources */,
 				47D9E4E32874ACA800430C08 /* Assets.xcassets in Resources */,
 				47D9E4E12874ACA800430C08 /* Main.storyboard in Resources */,
+				47E890A6287F08D20037EBD6 /* Coertschriftromaans-vXvy.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,6 +221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47AF12A2287E144C0064D54F /* FeaturedViewController+UICollectionViewDataSource.swift in Sources */,
 				4771E298287C979E00BBB609 /* PopularCollectionViewCell.swift in Sources */,
 				47AF129D287DF53E0064D54F /* Movie+TrendingToday.swift in Sources */,
 				47D9E4DE2874ACA800430C08 /* ViewController.swift in Sources */,
@@ -209,10 +231,12 @@
 				47AF129E287DF53E0064D54F /* Movie+NowPlaying.swift in Sources */,
 				4771E29F287C987800BBB609 /* UpcomingCollectionViewCell.swift in Sources */,
 				47AF129F287DF53E0064D54F /* Movie+Popular.swift in Sources */,
+				47F56781287F47E40086CFFF /* FeaturedViewController+UICollectionViewDelegate.swift in Sources */,
 				47AF12A0287DF53E0064D54F /* Movie+Upcoming.swift in Sources */,
 				47AF128C287DEE200064D54F /* Movie.swift in Sources */,
 				47AE475828775FD500DF454A /* FeaturedViewController.swift in Sources */,
 				47D9E4DC2874ACA800430C08 /* SceneDelegate.swift in Sources */,
+				47F5677F287F3ED10086CFFF /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,6 +388,7 @@
 				DEVELOPMENT_TEAM = 5M8NVJZA75;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ChallengeTriunfo/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CinEmo;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -392,6 +417,7 @@
 				DEVELOPMENT_TEAM = 5M8NVJZA75;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ChallengeTriunfo/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = CinEmo;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
