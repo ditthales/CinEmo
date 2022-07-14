@@ -11,13 +11,12 @@ class PopularCollectionViewCell: UICollectionViewCell {
     
     static let cellIdentifier = "popularCell"
     
-    @IBOutlet var image: UIImageView!
+    @IBOutlet var imageView: UIImageView!
     @IBOutlet var titleLabel: UILabel!
     
-    
-    
-    //cell.image.image = UIImage(named: "popular")
-
-
+    func setup(title: String, image: UIImage){
+        titleLabel.text = title
+        imageView.image = image
+    }
     
 }

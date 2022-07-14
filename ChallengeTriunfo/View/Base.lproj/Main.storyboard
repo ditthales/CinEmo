@@ -95,7 +95,7 @@
                                                                     </constraints>
                                                                 </collectionViewCellContentView>
                                                                 <connections>
-                                                                    <outlet property="image" destination="wBZ-mY-Sqx" id="V3Z-tO-Yfj"/>
+                                                                    <outlet property="imageView" destination="wBZ-mY-Sqx" id="P0w-Xj-jYb"/>
                                                                     <outlet property="titleLabel" destination="Jkl-kB-wAk" id="8o9-Qf-L2Z"/>
                                                                 </connections>
                                                             </collectionViewCell>
@@ -196,7 +196,7 @@
                                                                 </collectionViewCellContentView>
                                                                 <connections>
                                                                     <outlet property="dateLabel" destination="RJI-Jt-0nH" id="D5g-Gd-lWe"/>
-                                                                    <outlet property="image" destination="NbW-ja-leQ" id="5v5-r8-XwU"/>
+                                                                    <outlet property="imageView" destination="NbW-ja-leQ" id="edb-uz-O3y"/>
                                                                     <outlet property="titleLabel" destination="qm9-9F-FBr" id="TGD-Cm-yp4"/>
                                                                 </connections>
                                                             </collectionViewCell>
@@ -299,7 +299,7 @@
                                                                 </collectionViewCellContentView>
                                                                 <connections>
                                                                     <outlet property="dateLabel" destination="ufu-Q1-JHk" id="aeX-mu-Q3U"/>
-                                                                    <outlet property="image" destination="D7d-xJ-wwA" id="vDf-7d-ZRd"/>
+                                                                    <outlet property="imageView" destination="D7d-xJ-wwA" id="bbf-2H-fth"/>
                                                                     <outlet property="titleLabel" destination="ErS-y6-V3c" id="Lsl-fj-1kU"/>
                                                                 </connections>
                                                             </collectionViewCell>
