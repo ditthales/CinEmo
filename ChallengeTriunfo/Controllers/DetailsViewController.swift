@@ -9,12 +9,30 @@ import UIKit
 
 class DetailsViewController: UIViewController {
     
+    @IBOutlet var backdropImageView: UIImageView!
+    @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var posterImageView: UIImageView!
+    @IBOutlet var ratingLabel: UILabel!
+    @IBOutlet var overviewLabel: UILabel!
+    
     var movie: Movie?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(movie)
-        self.title = movie?.title
+        
+        guard let movie = movie else {
+            return
+        }
+        
+        self.title = movie.title
+        titleLabel.text = movie.title
+        backdropImageView.image = UIImage(named: movie.backdrop)
+        posterImageView.image = UIImage(named: movie.poster)
+        ratingLabel.text = "Rating: \(movie.voteAverage)/10"
+        overviewLabel.text = movie.overview
+        
+
+        
         // Do any additional setup after loading the view.
     }
     
