@@ -21,7 +21,7 @@ extension FeaturedViewController: UICollectionViewDelegate{
         }else if collectionView == upcomingCollectionView{
             movie = upcomingMovies[indexPath.row]
         }else{
-            movie = Movie(title: "", poster: "", backdrop: "", voteAverage: 0, releaseDate: "", overview: "", genres: [])
+            movie = Movie(title: "", posterPath: "", backdropPath: "", voteAverage: 0, releaseDate: "", overview: "", genres: [])
             print("Erro")
         }
         

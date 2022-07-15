@@ -41,7 +41,13 @@ extension FeaturedViewController: UICollectionViewDataSource{
     fileprivate func makePopularCell(_ collectionView: UICollectionView, _ indexPath: IndexPath) -> PopularCollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PopularCollectionViewCell.cellIdentifier, for: indexPath) as? PopularCollectionViewCell{
             cell.setup(title: popularMovies[indexPath.row].title,
-                       image: UIImage(named: popularMovies[indexPath.row].backdrop) ?? UIImage())
+                       image: UIImage())
+            let movie = popularMovies[indexPath.item]
+            Task{
+                let imageData = await Movie.downloadImageData(withPath: movie.backdropPath)
+                let imagem = UIImage(data: imageData)  ?? UIImage()
+                cell.setup(title: movie.title, image: imagem)
+            }
             return cell
         }
         
@@ -51,7 +57,7 @@ extension FeaturedViewController: UICollectionViewDataSource{
     fileprivate func makeNowPlayingCell(_ collectionView: UICollectionView, _ indexPath: IndexPath) -> NowPlayingCollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NowPlayingCollectionViewCell.cellIdentifier, for: indexPath) as? NowPlayingCollectionViewCell{
             cell.setup(title: nowPlayingMovies[indexPath.row].title,
-                       image: UIImage(named: nowPlayingMovies[indexPath.row].poster) ?? UIImage(),
+                       image: UIImage(named: nowPlayingMovies[indexPath.row].posterPath) ?? UIImage(),
                        date: String(nowPlayingMovies[indexPath.row].releaseDate.prefix(4)))
             return cell
         }
@@ -62,7 +68,7 @@ extension FeaturedViewController: UICollectionViewDataSource{
     fileprivate func makeUpcomingCell(_ collectionView: UICollectionView, _ indexPath: IndexPath) -> UpcomingCollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UpcomingCollectionViewCell.cellIdentifier, for: indexPath) as? UpcomingCollectionViewCell{
             let arrayDeData = upcomingMovies[indexPath.row].releaseDate.split(separator: "-")
-            cell.setup(title: upcomingMovies[indexPath.row].title, image: UIImage(named: upcomingMovies[indexPath.row].poster) ?? UIImage(), date: "\(arrayDeData[2])/\(arrayDeData[1])")
+            cell.setup(title: upcomingMovies[indexPath.row].title, image: UIImage(named: upcomingMovies[indexPath.row].posterPath) ?? UIImage(), date: "\(arrayDeData[2])/\(arrayDeData[1])")
             return cell
         }
         

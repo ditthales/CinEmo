@@ -26,8 +26,15 @@ class DetailsViewController: UIViewController {
         
         self.title = movie.title
         titleLabel.text = movie.title
-        backdropImageView.image = UIImage(named: movie.backdrop)
-        posterImageView.image = UIImage(named: movie.poster)
+        Task{
+            let imageDataBackdrop = await Movie.downloadImageData(withPath: movie.backdropPath)
+            let backdrop = UIImage(data: imageDataBackdrop)  ?? UIImage()
+            backdropImageView.image = backdrop
+            
+            let imageDataPoster = await Movie.downloadImageData(withPath: movie.posterPath)
+            let poster = UIImage(data: imageDataPoster)  ?? UIImage()
+            posterImageView.image = poster
+        }
         ratingLabel.text = "Rating: \(movie.voteAverage)/10"
         overviewLabel.text = movie.overview
         
