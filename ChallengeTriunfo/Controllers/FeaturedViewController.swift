@@ -14,7 +14,7 @@ class FeaturedViewController: UIViewController {
     @IBOutlet var upcomingCollectionView: UICollectionView!
     
     var popularMovies: [Movie] = []
-    let nowPlayingMovies: [Movie] = Movie.nowPlayingMovies()
+    var nowPlayingMovies: [Movie] = []
     let upcomingMovies: [Movie] = Movie.upcomingMovies()
     
     
@@ -32,6 +32,8 @@ class FeaturedViewController: UIViewController {
         Task{
             self.popularMovies = await Movie.popularMoviesAPI()
             self.popularCollectionView.reloadData()
+            self.nowPlayingMovies = await Movie.nowPlayingMoviesAPI()
+            self.nowPlayingCollectionView.reloadData()
         }
         
         // Do any additional setup after loading the view.

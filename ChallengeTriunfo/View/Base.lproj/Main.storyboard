@@ -360,7 +360,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="RmW-NN-Ih8">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="621"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1Ds7xy7ILo8u2WWxdnkJth1jQVT" translatesAutoresizingMaskIntoConstraints="NO" id="yke-5G-eta">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yke-5G-eta">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="221"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="yke-5G-eta" secondAttribute="height" multiplier="375:200" id="rJQ-eH-jfP"/>
@@ -421,7 +421,7 @@
                                                             </label>
                                                         </subviews>
                                                     </stackView>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2v6f1EqTo4FUxVT9MDXpF6158AX" translatesAutoresizingMaskIntoConstraints="NO" id="BGI-z6-oBp">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BGI-z6-oBp">
                                                         <rect key="frame" x="16" y="8" width="124" height="191.5"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" secondItem="BGI-z6-oBp" secondAttribute="height" multiplier="125:193" id="jKU-t4-kD1"/>
@@ -592,8 +592,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="1Ds7xy7ILo8u2WWxdnkJth1jQVT" width="780" height="439"/>
-        <image name="2v6f1EqTo4FUxVT9MDXpF6158AX" width="500" height="749"/>
         <image name="Header Cinemo" width="300" height="100"/>
         <image name="Header Cinemo2" width="300" height="100"/>
         <image name="film" catalog="system" width="128" height="93"/>

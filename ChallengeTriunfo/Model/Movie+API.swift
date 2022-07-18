@@ -18,7 +18,33 @@ extension Movie {
             URLQueryItem(name: "api_key", value: Movie.apiKey),
             URLQueryItem(name: "language", value: "pt-BR"),
             URLQueryItem(name: "sort_by", value: "popularity.desc"),
-            URLQueryItem(name: "with_keywords", value: "teen drama")
+            URLQueryItem(name: "with_keywords", value: "193400")
+        ]
+        
+        let session = URLSession.shared
+        do{
+            let (data, response) = try await session.data(from: components.url!)
+            
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
+            let movieResult = try decoder.decode(MoviesResponse.self, from: data)
+            return movieResult.results
+        }catch{
+            print(error)
+        }
+        
+        return []
+    }
+    
+    static func nowPlayingMoviesAPI() async -> [Movie] {
+        
+        var components = Movie.urlComponents
+        components.path = "/3/discover/movie"
+        components.queryItems = [
+            URLQueryItem(name: "api_key", value: Movie.apiKey),
+            URLQueryItem(name: "language", value: "pt-BR"),
+            URLQueryItem(name: "sort_by", value: "primary_release_date.desc"),
+            URLQueryItem(name: "with_keywords", value: "193400")
         ]
         
         let session = URLSession.shared
