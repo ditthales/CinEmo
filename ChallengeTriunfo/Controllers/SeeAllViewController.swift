@@ -18,10 +18,17 @@ class SeeAllViewController: UIViewController {
         super.viewDidLoad()
         
         seeAllTableView.dataSource = self
+        seeAllTableView.delegate = self
         
         // Do any additional setup after loading the view.
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? DetailsViewController{
+            let movie = sender as? Movie
+            destination.movie = movie
+        }
+    }
 
     /*
     // MARK: - Navigation

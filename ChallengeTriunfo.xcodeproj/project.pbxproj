@@ -23,6 +23,10 @@
 		47A640D728872D7600D52108 /* SearchViewController+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A640D628872D7600D52108 /* SearchViewController+UITableViewDataSource.swift */; };
 		47A640DB2887314B00D52108 /* SearchViewController+UISearchResultsUpdating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A640DA2887314B00D52108 /* SearchViewController+UISearchResultsUpdating.swift */; };
 		47A640DD2887404300D52108 /* SearchViewController+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A640DC2887404300D52108 /* SearchViewController+UITableViewDelegate.swift */; };
+		47A640DF2887489B00D52108 /* TrendingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A640DE2887489B00D52108 /* TrendingTableViewCell.swift */; };
+		47A640E1288749C400D52108 /* TrendingViewController+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A640E0288749C400D52108 /* TrendingViewController+UITableViewDataSource.swift */; };
+		47A640E3288749D800D52108 /* TrendingViewController+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A640E2288749D800D52108 /* TrendingViewController+UITableViewDelegate.swift */; };
+		47A640E52887570600D52108 /* SeeAllViewController+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A640E42887570600D52108 /* SeeAllViewController+UITableViewDelegate.swift */; };
 		47AE475828775FD500DF454A /* FeaturedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AE475728775FD500DF454A /* FeaturedViewController.swift */; };
 		47AF128C287DEE200064D54F /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AF128B287DEE200064D54F /* Movie.swift */; };
 		47AF129C287DF53E0064D54F /* Movie+TrendingThisWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47AF1297287DF53D0064D54F /* Movie+TrendingThisWeek.swift */; };
@@ -59,6 +63,10 @@
 		47A640D628872D7600D52108 /* SearchViewController+UITableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchViewController+UITableViewDataSource.swift"; sourceTree = "<group>"; };
 		47A640DA2887314B00D52108 /* SearchViewController+UISearchResultsUpdating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchViewController+UISearchResultsUpdating.swift"; sourceTree = "<group>"; };
 		47A640DC2887404300D52108 /* SearchViewController+UITableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchViewController+UITableViewDelegate.swift"; sourceTree = "<group>"; };
+		47A640DE2887489B00D52108 /* TrendingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingTableViewCell.swift; sourceTree = "<group>"; };
+		47A640E0288749C400D52108 /* TrendingViewController+UITableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrendingViewController+UITableViewDataSource.swift"; sourceTree = "<group>"; };
+		47A640E2288749D800D52108 /* TrendingViewController+UITableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrendingViewController+UITableViewDelegate.swift"; sourceTree = "<group>"; };
+		47A640E42887570600D52108 /* SeeAllViewController+UITableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SeeAllViewController+UITableViewDelegate.swift"; sourceTree = "<group>"; };
 		47AE475728775FD500DF454A /* FeaturedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedViewController.swift; sourceTree = "<group>"; };
 		47AF128B287DEE200064D54F /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		47AF1297287DF53D0064D54F /* Movie+TrendingThisWeek.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Movie+TrendingThisWeek.swift"; sourceTree = "<group>"; };
@@ -99,6 +107,7 @@
 				4771E29E287C987800BBB609 /* UpcomingCollectionViewCell.swift */,
 				47A640CC2886F2C000D52108 /* SeeAllTableViewCell.swift */,
 				47A640D228872BE600D52108 /* SearchTableViewCell.swift */,
+				47A640DE2887489B00D52108 /* TrendingTableViewCell.swift */,
 				47D9E4DF2874ACA800430C08 /* Main.storyboard */,
 				47D9E4E42874ACA800430C08 /* LaunchScreen.storyboard */,
 			);
@@ -126,11 +135,14 @@
 				47A640C42886E15A00D52108 /* PosterPhotoViewController.swift */,
 				47A640CA2886E96800D52108 /* SeeAllViewController.swift */,
 				47A640CE2886F47200D52108 /* SeeAllViewController+UITableViewDataSource.swift */,
-				47A640D0288722EA00D52108 /* TrendingViewController.swift */,
+				47A640E42887570600D52108 /* SeeAllViewController+UITableViewDelegate.swift */,
 				47A640D428872CB800D52108 /* SearchViewController.swift */,
 				47A640D628872D7600D52108 /* SearchViewController+UITableViewDataSource.swift */,
 				47A640DA2887314B00D52108 /* SearchViewController+UISearchResultsUpdating.swift */,
 				47A640DC2887404300D52108 /* SearchViewController+UITableViewDelegate.swift */,
+				47A640D0288722EA00D52108 /* TrendingViewController.swift */,
+				47A640E0288749C400D52108 /* TrendingViewController+UITableViewDataSource.swift */,
+				47A640E2288749D800D52108 /* TrendingViewController+UITableViewDelegate.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -264,12 +276,15 @@
 				47AF12A2287E144C0064D54F /* FeaturedViewController+UICollectionViewDataSource.swift in Sources */,
 				4771E298287C979E00BBB609 /* PopularCollectionViewCell.swift in Sources */,
 				47AF129D287DF53E0064D54F /* Movie+TrendingToday.swift in Sources */,
+				47A640DF2887489B00D52108 /* TrendingTableViewCell.swift in Sources */,
 				47A640CF2886F47200D52108 /* SeeAllViewController+UITableViewDataSource.swift in Sources */,
+				47A640E52887570600D52108 /* SeeAllViewController+UITableViewDelegate.swift in Sources */,
 				47D9E4DE2874ACA800430C08 /* ViewController.swift in Sources */,
 				47A640D728872D7600D52108 /* SearchViewController+UITableViewDataSource.swift in Sources */,
 				4771E29D287C986000BBB609 /* NowPlayingCollectionViewCell.swift in Sources */,
 				47AF129C287DF53E0064D54F /* Movie+TrendingThisWeek.swift in Sources */,
 				47D9E4DA2874ACA800430C08 /* AppDelegate.swift in Sources */,
+				47A640E1288749C400D52108 /* TrendingViewController+UITableViewDataSource.swift in Sources */,
 				47A640C52886E15A00D52108 /* PosterPhotoViewController.swift in Sources */,
 				47AF129E287DF53E0064D54F /* Movie+NowPlaying.swift in Sources */,
 				47A640DB2887314B00D52108 /* SearchViewController+UISearchResultsUpdating.swift in Sources */,
@@ -282,6 +297,7 @@
 				47A640D528872CB800D52108 /* SearchViewController.swift in Sources */,
 				47AF128C287DEE200064D54F /* Movie.swift in Sources */,
 				47AE475828775FD500DF454A /* FeaturedViewController.swift in Sources */,
+				47A640E3288749D800D52108 /* TrendingViewController+UITableViewDelegate.swift in Sources */,
 				479955E52881EC4400356DEA /* Movie+API.swift in Sources */,
 				479955E72881F8D900356DEA /* MoviesResponse.swift in Sources */,
 				47D9E4DC2874ACA800430C08 /* SceneDelegate.swift in Sources */,

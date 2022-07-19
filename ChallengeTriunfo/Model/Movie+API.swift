@@ -115,6 +115,32 @@ extension Movie {
         return []
     }
     
+    static func trendingAPI(isToday: Bool) async -> [Movie] {
+        var timeWindow: String
+        if isToday == true{
+            timeWindow = "day"
+        }else{
+            timeWindow = "week"
+        }
+        let urlString = "https://api.themoviedb.org/3/trending/all/\(timeWindow)?api_key=\(Movie.apiKey)"
+        print("url: \(urlString)")
+        let url: URL = URL(string: urlString)!
+        
+        let session = URLSession.shared
+        do{
+            let (data, response) = try await session.data(from: url)
+            
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
+            let movieResult = try decoder.decode(MoviesResponse.self, from: data)
+            return movieResult.results
+        }catch{
+            print(error)
+        }
+        
+        return []
+    }
+    
     static func downloadImageData(withPath: String) async -> Data{
         let urlString = "https://image.tmdb.org/t/p/w780\(withPath)"
         let url: URL = URL(string: urlString)!

@@ -24,7 +24,7 @@ extension SeeAllViewController: UITableViewDataSource{
             
             Task{
                 let poster = await Movie.downloadImageData(withPath: movie[indexPath.item].posterPath ?? "")
-                cell.setup(title: movie[indexPath.item].title , poster: (UIImage(data: poster) ?? UIImage(named: "posterPlaceholder")) ?? UIImage(), date: movie[indexPath.item].releaseDate, rating: String(movie[indexPath.item].voteAverage))
+                cell.setup(title: movie[indexPath.item].title ?? "", poster: (UIImage(data: poster) ?? UIImage(named: "posterPlaceholder")) ?? UIImage(), date: movie[indexPath.item].releaseDate ?? "", rating: String(movie[indexPath.item].voteAverage))
             }
             
             return cell
