@@ -17,7 +17,7 @@ extension SeeAllViewController: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "seeAllCell") as? SeeAllTableViewCell{
+        if let cell = tableView.dequeueReusableCell(withIdentifier: SeeAllTableViewCell.cellIdentifier) as? SeeAllTableViewCell{
             guard let movie = movie else {
                 return SeeAllTableViewCell()
             }

@@ -18,7 +18,7 @@ extension Movie {
             URLQueryItem(name: "api_key", value: Movie.apiKey),
             URLQueryItem(name: "language", value: "pt-BR"),
             URLQueryItem(name: "sort_by", value: "popularity.desc"),
-            URLQueryItem(name: "with_keywords", value: "193400")
+            URLQueryItem(name: "with_keywords", value: "1647")
         ]
         
         let session = URLSession.shared
@@ -44,8 +44,8 @@ extension Movie {
             URLQueryItem(name: "api_key", value: Movie.apiKey),
             URLQueryItem(name: "language", value: "pt-BR"),
             URLQueryItem(name: "sort_by", value: "vote_average.desc"),
-            URLQueryItem(name: "with_keywords", value: "193400"),
-            URLQueryItem(name: "vote_count.gte", value: "10")
+            URLQueryItem(name: "with_keywords", value: "1647"),
+            URLQueryItem(name: "vote_count.gte", value: "100")
         ]
         
         let session = URLSession.shared
@@ -71,8 +71,33 @@ extension Movie {
             URLQueryItem(name: "api_key", value: Movie.apiKey),
             URLQueryItem(name: "language", value: "pt-BR"),
             URLQueryItem(name: "sort_by", value: "release_date.desc"),
-            URLQueryItem(name: "with_keywords", value: "193400"),
-            URLQueryItem(name: "vote_count.gte", value: "1")
+            URLQueryItem(name: "with_keywords", value: "1647"),
+            URLQueryItem(name: "vote_count.gte", value: "10")
+        ]
+        
+        let session = URLSession.shared
+        do{
+            let (data, response) = try await session.data(from: components.url!)
+            
+            let decoder = JSONDecoder()
+            decoder.keyDecodingStrategy = .convertFromSnakeCase
+            let movieResult = try decoder.decode(MoviesResponse.self, from: data)
+            return movieResult.results
+        }catch{
+            print(error)
+        }
+        
+        return []
+    }
+    
+    static func searchAPI(searchString: String) async -> [Movie] {
+        
+        var components = Movie.urlComponents
+        components.path = "/3/search/movie"
+        components.queryItems = [
+            URLQueryItem(name: "api_key", value: Movie.apiKey),
+            URLQueryItem(name: "language", value: "pt-BR"),
+            URLQueryItem(name: "query", value: searchString),
         ]
         
         let session = URLSession.shared
