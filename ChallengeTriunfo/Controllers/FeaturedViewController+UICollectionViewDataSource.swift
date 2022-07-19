@@ -57,8 +57,14 @@ extension FeaturedViewController: UICollectionViewDataSource{
     fileprivate func makeNowPlayingCell(_ collectionView: UICollectionView, _ indexPath: IndexPath) -> NowPlayingCollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NowPlayingCollectionViewCell.cellIdentifier, for: indexPath) as? NowPlayingCollectionViewCell{
             cell.setup(title: nowPlayingMovies[indexPath.row].title,
-                       image: UIImage(named: nowPlayingMovies[indexPath.row].posterPath ?? "") ?? UIImage(),
+                       image: UIImage(),
                        date: String(nowPlayingMovies[indexPath.row].releaseDate.prefix(4)))
+            let movie = nowPlayingMovies[indexPath.item]
+            Task{
+                let imageData = await Movie.downloadImageData(withPath: movie.posterPath ?? "")
+                let imagem = UIImage(data: imageData)  ?? UIImage()
+                cell.setup(title: movie.title, image: imagem, date: String(nowPlayingMovies[indexPath.row].releaseDate.prefix(4)))
+            }
             return cell
         }
         
@@ -67,8 +73,13 @@ extension FeaturedViewController: UICollectionViewDataSource{
     
     fileprivate func makeUpcomingCell(_ collectionView: UICollectionView, _ indexPath: IndexPath) -> UpcomingCollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: UpcomingCollectionViewCell.cellIdentifier, for: indexPath) as? UpcomingCollectionViewCell{
-            let arrayDeData = upcomingMovies[indexPath.row].releaseDate.split(separator: "-")
-            cell.setup(title: upcomingMovies[indexPath.row].title, image: UIImage(named: upcomingMovies[indexPath.row].posterPath ?? "") ?? UIImage(), date: "\(arrayDeData[2])/\(arrayDeData[1])")
+            cell.setup(title: upcomingMovies[indexPath.row].title, image: UIImage(named: upcomingMovies[indexPath.row].posterPath ?? "posterPlaceholder") ?? UIImage(), date: String(upcomingMovies[indexPath.row].releaseDate.prefix(4)))
+            let movie = upcomingMovies[indexPath.item]
+            Task{
+                let imageData = await Movie.downloadImageData(withPath: movie.posterPath ?? "posterPlaceholder")
+                let imagem = UIImage(data: imageData)  ?? UIImage()
+                cell.setup(title: movie.title, image: imagem, date: String(upcomingMovies[indexPath.row].releaseDate.prefix(4)))
+            }
             return cell
         }
         

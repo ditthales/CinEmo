@@ -12,10 +12,14 @@ class FeaturedViewController: UIViewController {
     @IBOutlet var popularCollectionView: UICollectionView!
     @IBOutlet var nowPlayingCollectionView: UICollectionView!
     @IBOutlet var upcomingCollectionView: UICollectionView!
+    @IBOutlet var seeAllPopular: UIButton!
+    @IBOutlet var seeAllNowPlaying: UIButton!
+    @IBOutlet var seeAllUpcoming: UIButton!
+    
     
     var popularMovies: [Movie] = []
     var nowPlayingMovies: [Movie] = []
-    let upcomingMovies: [Movie] = Movie.upcomingMovies()
+    var upcomingMovies: [Movie] = []
     
     
     override func viewDidLoad() {
@@ -34,19 +38,38 @@ class FeaturedViewController: UIViewController {
             self.popularCollectionView.reloadData()
             self.nowPlayingMovies = await Movie.nowPlayingMoviesAPI()
             self.nowPlayingCollectionView.reloadData()
+            self.upcomingMovies = await Movie.upcomingAPI()
+            self.upcomingCollectionView.reloadData()
         }
         
         // Do any additional setup after loading the view.
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? DetailsViewController{
-            let movie = sender as? Movie
-            destination.movie = movie
+        
+        if segue.identifier == "seeAllSegue"{
+            if let destination = segue.destination as? SeeAllViewController{
+                let movie = sender as? [Movie]
+                destination.movie = movie
+            }
+        } else {
+            if let destination = segue.destination as? DetailsViewController{
+                let movie = sender as? Movie
+                destination.movie = movie
+            }
         }
     }
     
    
+    @IBAction func seeAllButton(_ sender: UIButton) {
+        if sender == seeAllPopular{
+            performSegue(withIdentifier: "seeAllSegue", sender: popularMovies)
+        } else if sender == seeAllNowPlaying{
+            performSegue(withIdentifier: "seeAllSegue", sender: nowPlayingMovies)
+        } else {
+            performSegue(withIdentifier: "seeAllSegue", sender: upcomingMovies)
+        }
+    }
     
 
     /*

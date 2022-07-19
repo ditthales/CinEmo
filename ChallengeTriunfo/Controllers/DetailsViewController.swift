@@ -40,9 +40,20 @@ class DetailsViewController: UIViewController {
         ratingLabel.text = "Rating: \(movie.voteAverage)/10"
         overviewLabel.text = movie.overview
         
+        
 
         
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func posterButton() {
+        performSegue(withIdentifier: "posterSegue", sender: movie)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? PosterPhotoViewController{
+            let movie = sender as? Movie
+            destination.movie = movie
+        }
     }
     
 
