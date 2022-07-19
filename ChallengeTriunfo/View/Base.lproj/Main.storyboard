@@ -663,7 +663,7 @@
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kuZ-oP-5R8"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.50588235290000005" green="0.68627450980000004" blue="0.64705882349999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="SG3-pO-rqB" firstAttribute="leading" secondItem="kuZ-oP-5R8" secondAttribute="leading" id="ACy-YQ-tP0"/>
                             <constraint firstItem="kuZ-oP-5R8" firstAttribute="bottom" secondItem="SG3-pO-rqB" secondAttribute="bottom" id="HxS-sR-EAj"/>
@@ -680,7 +680,7 @@
             </objects>
             <point key="canvasLocation" x="3768" y="672"/>
         </scene>
-        <!--Titulo-->
+        <!--Buscar-->
         <scene sceneID="ooe-F8-PBd">
             <objects>
                 <viewController id="Zlg-Em-fYU" customClass="SearchViewController" customModule="ChallengeTriunfo" customModuleProvider="target" sceneMemberID="viewController">
@@ -762,7 +762,7 @@
                             <constraint firstItem="ESF-Rx-3f7" firstAttribute="top" secondItem="qzR-3r-nDB" secondAttribute="top" id="VBq-Cu-hfj"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Titulo" largeTitleDisplayMode="always" id="dLQ-eJ-NwY"/>
+                    <navigationItem key="navigationItem" title="Buscar" largeTitleDisplayMode="always" id="dLQ-eJ-NwY"/>
                     <connections>
                         <outlet property="tableViewDeSearch" destination="ESF-Rx-3f7" id="Ity-rj-7BE"/>
                         <segue destination="gZb-SZ-tcn" kind="show" identifier="searchDetailsSegue" id="HS3-rx-6J1"/>
@@ -772,11 +772,11 @@
             </objects>
             <point key="canvasLocation" x="-1722" y="80"/>
         </scene>
-        <!--Item-->
+        <!--Buscar-->
         <scene sceneID="s3v-gs-d5p">
             <objects>
                 <navigationController id="yi2-Oq-xVc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="zZk-Aq-J4f"/>
+                    <tabBarItem key="tabBarItem" title="Buscar" image="magnifyingglass" catalog="system" selectedImage="magnifyingglass" id="zZk-Aq-J4f"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="e8P-fw-MFZ">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -811,11 +811,11 @@
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="79.6875"/>
         </scene>
-        <!--Item-->
+        <!--Trending-->
         <scene sceneID="R60-ov-gu2">
             <objects>
                 <navigationController id="VIG-eF-cHD" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="4NW-Ta-Rhy"/>
+                    <tabBarItem key="tabBarItem" title="Trending" image="flame" catalog="system" selectedImage="flame.fill" id="4NW-Ta-Rhy"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="npn-Fk-B8T">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -828,7 +828,7 @@
             </objects>
             <point key="canvasLocation" x="19" y="820"/>
         </scene>
-        <!--Titulo-->
+        <!--Trending-->
         <scene sceneID="VsQ-Y3-wxz">
             <objects>
                 <viewController id="NHW-ej-13Z" customClass="TrendingViewController" customModule="ChallengeTriunfo" customModuleProvider="target" sceneMemberID="viewController">
@@ -925,7 +925,7 @@
                             <constraint firstItem="z03-x4-HqX" firstAttribute="top" secondItem="1OW-Cj-bkK" secondAttribute="bottom" constant="8" id="yzP-u0-QWt"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Titulo" id="bFm-fL-KkZ"/>
+                    <navigationItem key="navigationItem" title="Trending" id="bFm-fL-KkZ"/>
                     <connections>
                         <outlet property="segmentedControlOutlet" destination="1OW-Cj-bkK" id="csb-Aq-hyG"/>
                         <outlet property="trendingTableView" destination="z03-x4-HqX" id="1GC-l8-buj"/>
@@ -992,20 +992,20 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="o6E-Gs-UKT"/>
+        <segue reference="HS3-rx-6J1"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Header Cinemo" width="300" height="100"/>
         <image name="Header Cinemo2" width="300" height="100"/>
         <image name="film" catalog="system" width="128" height="93"/>
         <image name="film.fill" catalog="system" width="128" height="93"/>
+        <image name="flame" catalog="system" width="108" height="128"/>
+        <image name="flame.fill" catalog="system" width="108" height="128"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="posterPlaceholder" width="184" height="260"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>
 </document>
