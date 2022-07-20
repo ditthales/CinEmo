@@ -1,6 +1,3 @@
-# challenge-triunfo
-
-
 <h1>CinEmo: um app de filmes para pessoas tristes</h1>
   
 <p>Sejam bem vindos ao meu app de filmes. Feito em Swift usando UIKit, este é meu primeiro contato com conceitos novos como MVC e APIs. Tento explorar ao máximo as possibilidades de uso da API e ter um tema: ser um app de filmes para pessoas tristes.</p>
