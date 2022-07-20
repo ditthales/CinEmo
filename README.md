@@ -1,7 +1,7 @@
 <h1>CinEmo: um app de filmes para pessoas tristes</h1>
   
 <p>Sejam bem vindos ao meu app de filmes. Feito em Swift usando UIKit, este é meu primeiro contato com conceitos novos como MVC e APIs. Tento explorar ao máximo as possibilidades de uso da API e ter um tema: ser um app de filmes para pessoas tristes.</p>
-<p>Fiz uso da API do The Movie DataBase e trabalhei conceitos de Collection View, Table View e Navegação.</p>
+<p>Fiz uso da API do The Movie DataBase e trabalhei conceitos de Collection View, Table View, Navegação e sistema de busca.</p>
 <p>Para ver o que o app é capaz de fazer você pode baixar o repositório e abrir no xCode. O app está com autolayout e deverá funcionar bem em qualquer iPhone. Caso queira ter uma impressão rápida você pode conferir alguns screenshots abaixo.</p>
 
 <img src="https://s3.us-west-2.amazonaws.com/secure.notion-static.com/9d46fa6c-b7f9-45fe-86f8-497a984241b1/Simulator_Screen_Shot_-_iPhone_12_-_2022-07-19_at_23.05.31.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220720%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220720T022836Z&X-Amz-Expires=86400&X-Amz-Signature=a37cf20b636e41c89be5357d154ccd7571f2ffddaf25695ee67cb728ea7added&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Simulator%2520Screen%2520Shot%2520-%2520iPhone%252012%2520-%25202022-07-19%2520at%252023.05.31.png%22&x-id=GetObject" height="500"></img>
